@@ -1,0 +1,36 @@
+<!--pages/find/find.wxml-->
+<view>
+  <!-- 轮播图S -->
+  <view class="swiper-all">
+    <swiper 
+        indicator-dots="{{false}}" 
+        autoplay="{{true}}" 
+        interval="{{2000}}" 
+        duration="{{500}}"
+        class="swiper"
+        bindchange="swiperChange"
+    >
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}">{{item}}</view>
+        </swiper-item>
+      </block>      
+    </swiper>
+    <view class="dots">
+          <text 
+          wx:for="{{background}}"  
+          wx:for-index="idx"
+          class="{{curIdx==idx?'on':''}}" 
+          style="background:{{curIdx===idx ? item.color : 'white'}}"
+          wx:key="*this"
+          >
+          </text>
+      </view>
+  </view>
+    <!-- 轮播图E -->
+  <view class="search">
+      <input bindconfirm="confirmSearch" type="text" value="{{name}}" bindinput="nameChange"/>
+      <text bindtap="cancelSearch">取消</text>
+      <image  src="/assets/search.png" />
+  </view>
+</view>
