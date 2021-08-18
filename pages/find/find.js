@@ -5,9 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-      background: ['demo-1', 'demo-2', 'demo-3'],
-      curIdx:0,
-      name:''
+    background: ['demo-1', 'demo-2', 'demo-3'],
+    curIdx: 0,
+    name: '',
+    cateArr: [
+      { id: 1, label: '内地', value: 'aa' },
+      { id: 2, label: '日韩', value: 'vv' },
+      { id: 3, label: '流行', value: 'cc' },
+      { id: 4, label: '欧美', value: 'dd' }
+    ]
   },
 
   /**
@@ -65,19 +71,22 @@ Page({
   onShareAppMessage: function () {
 
   },
-  swiperChange(e){
-    console.log('e',e.detail.current);
-    this.setData({curIdx:e.detail.current})
+  swiperChange(e) {
+    console.log('e', e.detail.current);
+    this.setData({ curIdx: e.detail.current })
   },
   nameChange(e) {
     // 表单手动取值
-    this.setData({name: e.detail.value})
+    this.setData({ name: e.detail.value })
     console.log(this.data.name)
-    },
-    confirmSearch() {
-        console.log('调接口发生搜索')
-    },
-    cancelSearch() {
-        this.setData({name: ''})
-    }
+  },
+  confirmSearch() {
+    console.log('调接口发生搜索')
+  },
+  cancelSearch() {
+    this.setData({ name: '' })
+  },
+  catePickerChange(e) {
+    console.log('catePickerChange', e);
+  }
 })

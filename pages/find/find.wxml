@@ -33,4 +33,17 @@
       <text bindtap="cancelSearch">取消</text>
       <image  src="/assets/search.png" />
   </view>
+
+  <view>
+    <picker 
+    bindchange="catePickerChange" 
+    value="{{index}}" 
+    range="{{cateArr}}"
+    range-key="label"
+    >
+      <view class="picker">
+        选择：{{cateArr[label].label}}
+      </view>
+    </picker>
+  </view>
 </view>
