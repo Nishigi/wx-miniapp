@@ -34,16 +34,42 @@
       <image  src="/assets/search.png" />
   </view>
 
-  <view>
-    <picker 
-    bindchange="catePickerChange" 
-    value="{{index}}" 
-    range="{{cateArr}}"
-    range-key="label"
+<!-- 下拉框s -->
+  <view class="filter">
+    <view>
+      <picker 
+      bindchange="catePickerChange" 
+      value="{{curCateIdx}}" 
+      range="{{cateArr}}"
+      range-key="label"
     >
-      <view class="picker">
-        选择：{{cateArr[label].label}}
-      </view>
-    </picker>
+        <view class="col">
+          <text>{{cateArr[curCateIdx].label}}</text>
+        </view>
+      </picker>
+    </view>
+
+    <view>
+      <picker mode="date" bindchange="datePickerChange">
+        <view class="col">
+          <text>{{curDate}}</text>
+        </view>
+      </picker>
+      <picker mode="time" bindchange="timePickerChange">
+        <view class="col">
+          <text>{{curTime}}</text>
+        </view>
+      </picker>
+    </view>
   </view>
+<!-- 音乐列表s -->
+  <view class="music-list">
+    <music_item 
+        wx:for="{{musicArr}}"
+        wx:key="*this"
+        music="{{item}}"
+    >
+    </music_item>
+  </view>
+
 </view>

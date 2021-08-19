@@ -1,0 +1,17 @@
+<!--components/music_item/music_item.wxml-->
+<view class="music">
+    <view class="left">
+        <text 
+            class="label"
+            style="background:{{label[music.type]}};"
+        >{{music.label}}</text>
+    </view>
+    <view class="right">
+        <image 
+            src='/assets/search.png'
+            data-abc='1'
+            data-random="{{music.id}}"
+            catchtap='skip' 
+        />
+    </view>
+</view>

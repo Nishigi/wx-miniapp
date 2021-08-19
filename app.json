@@ -2,16 +2,40 @@
   "pages": [
     "pages/find/find",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/shop/shop"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#ccc",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#E33C49",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "音乐"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "店铺"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息将用于为你推荐附近的商家"
+    }
+  }
 }
