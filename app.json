@@ -1,9 +1,10 @@
 {
   "pages": [
     "pages/find/find",
-    "pages/index/index",
+    "pages/shop/shop",
+    "pages/shop-info/shop-info",
     "pages/user/user",
-    "pages/shop/shop"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,15 +22,21 @@
     "list": [
       {
         "pagePath": "pages/find/find",
-        "text": "音乐"
+        "text": "音乐",
+        "iconPath": "/assets/bar/music.png",
+        "selectedIconPath": "/assets/bar/music-on.png"
       },
       {
         "pagePath": "pages/shop/shop",
-        "text": "店铺"
+        "text": "店铺",
+        "iconPath": "/assets/bar/shop.png",
+        "selectedIconPath": "/assets/bar/shop-on.png"
       },
       {
         "pagePath": "pages/user/user",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "/assets/bar/user.png",
+        "selectedIconPath": "/assets/bar/user-on.png"
       }
     ]
   },

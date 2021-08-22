@@ -1,6 +1,6 @@
 // app.js
 
-const { fetchLogin } = require("./utils/request")
+const { fetchLogin,fetchMusic } = require("./utils/request")
 
 //入口文件
 App({

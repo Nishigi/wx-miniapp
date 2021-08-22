@@ -1,8 +1,8 @@
-const baseURL='http://10.36.149.29:9999'
+// const baseURL='http://10.36.149.29:9999'
 function fetch(url,method,data){
     return new Promise((resolve,reject)=>{
       wx.request({
-        url: baseURL+url,
+        url,
         method,
         data,
         headers:{
@@ -24,8 +24,12 @@ function fetch(url,method,data){
 }
 
 function fetchLogin(data){
-  return fetch('/api/v1/weapp/login','post',data)
+  return fetch('http://10.36.149.29:9999/api/v1/weapp/login','post',data)
+}
+function fetchMusic(data){
+  return fetch('https://c.y.qq.com/soso/fcgi-bin/client_search_cp','post',data)
 }
 module.exports={
-  fetchLogin
+  fetchLogin,
+  fetchMusic
 }

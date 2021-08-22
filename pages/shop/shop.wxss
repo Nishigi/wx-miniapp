@@ -1,1 +1,4 @@
 /* pages/shop/shop.wxss */
+view{
+  margin-top: 20px;
+}
